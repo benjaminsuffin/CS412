@@ -78,7 +78,7 @@ const mod = (s) => {
 
 const parse = (s) => {
 
-    let left = "";
+    let left = ""; //left parameter
     const ops = {'+': 0, '*': 0, '-': 0, '/': 0, '%': 0};
     const sLen = s.length;
 
@@ -87,12 +87,12 @@ const parse = (s) => {
         const currentChar = s.charAt(i);
         if (currentChar in ops){
 
-            const right = s.slice(i + 1);
+            const right = s.slice(i + 1); //rest of string = right parameter
             return [parseInt(left), parseInt(right)];
         }
         else {
 
-            left += currentChar;
+            left += currentChar; //add to left parameter
         }
     }
     return [];

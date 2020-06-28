@@ -1,0 +1,17 @@
+<h1>Welcome to {{title}}</h1>
+
+
+<div name="outerList">
+  <ul *ngFor="let ip of addrs">
+
+    <li (click)="showCityAndRegion(ip.address)">{{ip.address}} </li>
+
+  </ul>
+</div>
+
+<div name="details" *ngIf="selectedIP">
+  <input name="city" type="text" value="{{selectedIP.city}}">
+  <input name="region" type="text" value="{{selectedIP.region}}">
+
+</div>
+

@@ -1,0 +1,12 @@
+  <h4>Enter an IP address below</h4>
+
+  <form (ngSubmit)="getCityAndRegion()">
+    IP: <input name="ip" [(ngModel)]="ip">
+    <button type="submit">
+      Find your location
+    </button>
+  </form>
+
+  <br/><br/>
+
+  <app-result [result]= "addr"></app-result>
